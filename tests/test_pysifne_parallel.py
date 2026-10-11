@@ -46,10 +46,8 @@ def test_single_task_plan_is_serial() -> None:
 def test_process_batch_keeps_verified_pipeline_output_exact() -> None:
     fixture = (
         Path(__file__).resolve().parents[1]
-        / "data"
-        / "derived"
-        / "reference-freezing"
-        / "sifne-fixture-20260915-r4"
+        / "tests" / "fixtures"
+        / "core"
         / "input"
         / "fixture_input.tif"
     )

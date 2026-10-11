@@ -15,10 +15,8 @@ from pysifne.fragments import (
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 
@@ -128,10 +126,8 @@ def test_junction_intermediates_and_component_counts() -> None:
 def test_junction_cleanup_matches_independent_matlab_fixture() -> None:
     path = (
         REPO_ROOT
-        / "data"
-        / "derived"
-        / "reference-freezing"
-        / "junction-cleanup-20260915"
+        / "tests" / "fixtures"
+        / "junction-cleanup"
         / "npz"
         / "junction_cleanup.npz"
     )

@@ -8,7 +8,7 @@ from pysifne.lft_oft import C_PI, lft_oft
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-FIXTURE_ROOT = REPO_ROOT / "data" / "derived" / "reference-freezing" / "sifne-fixture-20260915-r4"
+FIXTURE_ROOT = REPO_ROOT / "tests" / "fixtures" / "core"
 
 
 def _load_golden() -> tuple[dict[str, np.ndarray], dict[str, np.ndarray]]:

@@ -11,10 +11,8 @@ from pysifne.lft_oft import lft_oft
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "lft-oft-differential-20260915"
+    / "tests" / "fixtures"
+    / "lft-oft"
     / "npz"
 )
 

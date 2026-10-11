@@ -1,5 +1,3 @@
-include *.py LICENSE THIRD_PARTY_NOTICES.md README.md environment.yml
-recursive-include tests *.py
-recursive-include data/derived/reference-freezing *.npz *.mat *.tif *.m *.json
-recursive-include docs *.md *.json
+include *.py LICENSE README.md environment.yml
+recursive-include tests *.py *.npz *.tif
 global-exclude __pycache__ *.py[cod] *.nbc *.nbi

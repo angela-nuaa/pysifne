@@ -15,18 +15,14 @@ from pysifne.grouping_accel import numba_trace_composite  # noqa: E402
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GROUPING_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "grouping-20260915"
+    / "tests" / "fixtures"
+    / "grouping"
     / "npz"
 )
 STAGE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 

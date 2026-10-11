@@ -27,10 +27,8 @@ from pysifne.segmentation import bwmorph_thin
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 
@@ -220,7 +218,7 @@ def test_cuda_large_cur_flags_matches_readable_reference_fixtures() -> None:
     pytest.importorskip("numba")
     if not cuda_available():
         pytest.skip("CUDA device is not available")
-    with np.load(FIXTURE_ROOT.parent.parent / "itergen-fragment-20260915" / "npz" / "large_cur_flag.npz", allow_pickle=False) as data:
+    with np.load(FIXTURE_ROOT.parent.parent / "itergen-fragment" / "npz" / "large_cur_flag.npz", allow_pickle=False) as data:
         cases = (
             data["LargeCurStraight"],
             data["LargeCurLShape"],
@@ -246,7 +244,7 @@ def test_numba_large_cur_tail_is_exact_on_reference_inputs() -> None:
     pytest.importorskip("numba")
     with np.load(
         FIXTURE_ROOT.parent.parent
-        / "itergen-fragment-20260915"
+        / "itergen-fragment"
         / "npz"
         / "large_cur_flag.npz",
         allow_pickle=False,

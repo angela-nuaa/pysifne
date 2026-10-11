@@ -17,18 +17,14 @@ from pysifne.tips import (
 REPO_ROOT = Path(__file__).resolve().parents[1]
 STAGE_FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 TIP_FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "tipreg-20260915"
+    / "tests" / "fixtures"
+    / "tips"
     / "npz"
 )
 

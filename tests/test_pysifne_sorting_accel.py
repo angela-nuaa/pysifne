@@ -25,10 +25,8 @@ from pysifne.sorting_accel import (
 REPO_ROOT = Path(__file__).resolve().parents[1]
 STAGE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 
@@ -139,10 +137,8 @@ def test_cuda_sort_companions_preserve_all_direct_sorting_outputs() -> None:
 
     sort_root = (
         REPO_ROOT
-        / "data"
-        / "derived"
-        / "reference-freezing"
-        / "sortfilament-20260915"
+        / "tests" / "fixtures"
+        / "sorting"
         / "npz"
     )
     case_names = (

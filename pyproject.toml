@@ -9,7 +9,7 @@ description = "MATLAB-free SIFNE filament reconstruction with custom Numba CUDA 
 readme = "README.md"
 requires-python = ">=3.10"
 license = "BSD-2-Clause"
-license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+license-files = ["LICENSE"]
 authors = [{name = "PySIFNE contributors"}]
 dependencies = ["numpy>=1.24", "scipy>=1.10", "scikit-image>=0.21", "tifffile>=2023.7.10"]
 
@@ -22,7 +22,7 @@ dev = ["pytest>=8", "build>=1"]
 Repository = "https://github.com/angela-nuaa/pysifne"
 Issues = "https://github.com/angela-nuaa/pysifne/issues"
 
-# 根目录同时作为 Python package，保持主仓库 pysifne/ submodule 的导入路径。
+# 包源码位于仓库根目录。
 [tool.setuptools]
 packages = ["pysifne"]
 package-dir = {pysifne = "."}

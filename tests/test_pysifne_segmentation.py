@@ -10,10 +10,8 @@ from pysifne.segmentation import bwmorph_thin, graythresh, imbinarize, mat2gray
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 

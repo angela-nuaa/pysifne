@@ -15,8 +15,8 @@ from pysifne.tips_accel import (  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-TIP_ROOT = REPO_ROOT / "data" / "derived" / "reference-freezing" / "tipreg-20260915" / "npz"
-STAGE_ROOT = REPO_ROOT / "data" / "derived" / "reference-freezing" / "sifne-fixture-20260915-r4" / "npz"
+TIP_ROOT = REPO_ROOT / "tests" / "fixtures" / "tips" / "npz"
+STAGE_ROOT = REPO_ROOT / "tests" / "fixtures" / "core" / "npz"
 
 
 def _load(path: Path) -> dict[str, np.ndarray]:

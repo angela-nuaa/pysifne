@@ -9,13 +9,11 @@ from pysifne.lft_oft_accel import cuda_available, cuda_lft_oft
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-FIXTURE_ROOT = REPO_ROOT / "data" / "derived" / "reference-freezing" / "sifne-fixture-20260915-r4"
+FIXTURE_ROOT = REPO_ROOT / "tests" / "fixtures" / "core"
 DIFFERENTIAL_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "lft-oft-differential-20260915"
+    / "tests" / "fixtures"
+    / "lft-oft"
     / "npz"
 )
 

@@ -15,18 +15,14 @@ from pysifne.pairing import (
 REPO_ROOT = Path(__file__).resolve().parents[1]
 STAGE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
     / "npz"
 )
 PAIRING_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "pairing-20260915"
+    / "tests" / "fixtures"
+    / "pairing"
     / "npz"
 )
 

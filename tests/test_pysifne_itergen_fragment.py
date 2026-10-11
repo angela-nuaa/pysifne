@@ -11,10 +11,8 @@ from pysifne.fragments import iterative_fragment_extraction, label_components, l
 REPO_ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_ROOT = (
     REPO_ROOT
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "itergen-fragment-20260915"
+    / "tests" / "fixtures"
+    / "itergen-fragment"
     / "npz"
 )
 

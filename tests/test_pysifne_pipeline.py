@@ -13,17 +13,13 @@ from pysifne import SIFNEConfig, analyze_mt, export_matlab_compatibility
 
 FIXTURE_ROOT = (
     Path(__file__).resolve().parents[1]
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-fixture-20260915-r4"
+    / "tests" / "fixtures"
+    / "core"
 )
 PIPELINE_FIXTURE_ROOT = (
     Path(__file__).resolve().parents[1]
-    / "data"
-    / "derived"
-    / "reference-freezing"
-    / "sifne-pipeline-fixtures-20260915"
+    / "tests" / "fixtures"
+    / "pipeline"
 )
 
 
