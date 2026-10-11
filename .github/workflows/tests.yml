@@ -1,0 +1,33 @@
+name: tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  windows-reference:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: pysifne
+          python-version: "3.12"
+      - shell: pwsh
+        run: conda run -n pysifne python -m pip install ".[accel,dev]"
+      - shell: pwsh
+        run: conda run -n pysifne python -m pytest -q tests
+      - shell: pwsh
+        run: conda run -n pysifne python -m build
+  linux-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: pysifne
+          python-version: "3.12"
+      - shell: bash -el {0}
+        run: conda run -n pysifne python -m pip install ".[dev]"
+      - shell: bash -el {0}
+        run: conda run -n pysifne python -m pytest -q tests/test_pysifne_api.py tests/test_pysifne_lft_oft.py tests/test_pysifne_segmentation.py
+      - shell: bash -el {0}
+        run: conda run -n pysifne python -m build

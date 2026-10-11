@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# 原始算法及冻结输入逐字节保留，避免换行转换破坏 SHA-256。
+*.py -text
+data/** -text

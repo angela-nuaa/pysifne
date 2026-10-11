@@ -1,0 +1,465 @@
+{
+  "generated_utc": "2026-09-15T05:45:50.091197+00:00",
+  "fixture_root": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur",
+  "input": {
+    "path": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\input\\fixture_input.tif",
+    "sha256": "c824a548f941e52eed8db8993458347bde2a1a613991ea49a491bc1ceea9f798"
+  },
+  "fluoresfm_git_head": "772ac54b2090d4de343979b8ba221c4de541ff85",
+  "source_files": [
+    {
+      "path": "D:\\Documents\\AI\\CV\\FluoResFM\\repos\\fluoresfm\\methods\\SIFNE\\func_analysis_mt.m",
+      "sha256": "e3a22f24c8fe36045eb952f25cd3bebec3dc3287a1e2ef566a5cf6be4fce35f3"
+    },
+    {
+      "path": "D:\\Documents\\AI\\CV\\FluoResFM\\repos\\fluoresfm\\methods\\SIFNE\\local_search.m",
+      "sha256": "1374fd726bcc02ad80e10b2babec9c141560cc2ebce7e20301d22786aad9278b"
+    },
+    {
+      "path": "D:\\Documents\\AI\\CV\\FluoResFM\\repos\\fluoresfm\\methods\\SIFNE\\LFT_OFT_mex.c",
+      "sha256": "5f1e430bb9214a749716dc42fe7d700be82bbf53f00e2b3675e00208f01b9bf3"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "stage_00_input",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_00_input.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_00_input.npz",
+      "mat_sha256": "44a848f0b1d4c6d4dd85b29cdbdd60aef4572549cd98f622c9b0df320d0be9f3",
+      "npz_sha256": "c9940eeb87b1e94a0dc0637da759f74f2a2f3de56f324fefcb644ecc6c64c333",
+      "arrays": {
+        "input_img": {
+          "shape": [
+            120,
+            180
+          ],
+          "dtype": "uint8"
+        },
+        "input_path": {
+          "shape": [
+            1
+          ],
+          "dtype": "<U133"
+        },
+        "R": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "NofOrientations_FT": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "OriginImg": {
+          "shape": [
+            120,
+            180
+          ],
+          "dtype": "uint8"
+        },
+        "OriginImg_Margin": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "uint8"
+        },
+        "ROI_Mask": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_01_oft",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_01_oft.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_01_oft.npz",
+      "mat_sha256": "50c441a8c84a0d6f93a28c5647fd0e8a58b251bb889ba246c0273231768a6f51",
+      "npz_sha256": "dc12a0f0a315b69f2587f104e3550ff68092d48f0f1d6e6fc6d4605d8030c242",
+      "arrays": {
+        "OFT_Img": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        },
+        "LFT_Img": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        },
+        "LFT_Orientations": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_02_bw",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_02_bw.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_02_bw.npz",
+      "mat_sha256": "aa850363a1b7052f6e1a542a95e0008ca92ec25a4f9d9feb08b8c45d57fcfb48",
+      "npz_sha256": "116c78168eb1d65d8de97ded1823bc6ff408589a1b24c1b70b1720a1e7d2f7b0",
+      "arrays": {
+        "I": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        },
+        "OtsuThreshold": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "ThresholdUsed": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "BW": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "bool"
+        }
+      }
+    },
+    {
+      "stage": "stage_03_rawske",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_03_rawske.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_03_rawske.npz",
+      "mat_sha256": "b4ca9e497f119b3f7cc9b817458cac7f5c6dc01af3b97a63c4e1af614a335670",
+      "npz_sha256": "bba18148516268543db13ef980c6178291ddbcabe2c8adc67e6ea351274ff5d7",
+      "arrays": {
+        "RawSke": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "bool"
+        },
+        "Allpts_initial": {
+          "shape": [
+            130,
+            2
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_04_fragments",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_04_fragments.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_04_fragments.npz",
+      "mat_sha256": "f66551cb7ad4d4e9692524c59dfdb1dcbd909fc537b221fc274b27ad4c145e1f",
+      "npz_sha256": "224dd362ee8163895bb3f6c8417ef4f005ab6b72ea428385a8a50dff123c0ad5",
+      "arrays": {
+        "R_Junc": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "Size_Junc": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "MIN_FragmentLength": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "AllFragments": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "bool"
+        },
+        "Allpts": {
+          "shape": [
+            218,
+            2
+          ],
+          "dtype": "float64"
+        },
+        "CrPts": {
+          "shape": [
+            0,
+            2
+          ],
+          "dtype": "float64"
+        },
+        "L": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        },
+        "num": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "RawCrPts": {
+          "shape": [
+            0,
+            2
+          ],
+          "dtype": "float64"
+        },
+        "AllFragments_before_iteration": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "bool"
+        },
+        "L_before_iteration": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        },
+        "num_before_iteration": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_05_tips",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_05_tips.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_05_tips.npz",
+      "mat_sha256": "23cd2c9d36e1538cbdb36040f17ec1154901b405b9d495512f5ad226d149ede7",
+      "npz_sha256": "4c0f482a2d161e4c1ccf2b63385159a15ea83591478552cbb3c4f1594f47b38e",
+      "arrays": {
+        "RegR": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "all_tips": {
+          "shape": [
+            12,
+            6
+          ],
+          "dtype": "float64"
+        },
+        "tempInfo": {
+          "shape": [
+            12,
+            3
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_06_pairing",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_06_pairing.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_06_pairing.npz",
+      "mat_sha256": "1e6883922f89841e98c7d758e030be657be4ff1991d1cbed9f8f21e5077bb6d5",
+      "npz_sha256": "76667d33752af87a9748f6ce400b61731178d8db052b33046067faf7d785c7a4",
+      "arrays": {
+        "FanAngle": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "C1": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "C3": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "FanR": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "MIN_Info": {
+          "shape": [
+            1,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "all_tips": {
+          "shape": [
+            12,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "label_list": {
+          "shape": [
+            12,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "L_GlobalIndex": {
+          "shape": [
+            140,
+            200
+          ],
+          "dtype": "float64"
+        },
+        "new_partner_list": {
+          "shape": [
+            12,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "all_tips_pre_bidir": {
+          "shape": [
+            12,
+            9
+          ],
+          "dtype": "float64"
+        },
+        "all_tips_post_bidir": {
+          "shape": [
+            12,
+            9
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_07_grouped",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_07_grouped.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_07_grouped.npz",
+      "mat_sha256": "a92f4e9f17c283bdbfb0af0719124f5073b44a38e29082d1de74ce6305684d86",
+      "npz_sha256": "492675ca3db8190bb412f40a393da7dc75ad8fbca5e6cb0aa6c9e2320c002ffc",
+      "arrays": {
+        "all_filament": {
+          "shape": [
+            130,
+            2,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "all_connects": {
+          "shape": [
+            6,
+            2,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "all_connects_shortlist": {
+          "shape": [
+            6,
+            2,
+            3
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    {
+      "stage": "stage_08_sorted",
+      "mat": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\mat\\stage_08_sorted.mat",
+      "npz": "D:\\Documents\\AI\\CV\\FluoResFM\\data\\derived\\reference-freezing\\sifne-pipeline-fixtures-20260915\\curved_largecur\\npz\\stage_08_sorted.npz",
+      "mat_sha256": "728479ff876e995903396d68d15645ffa7570992495caeeb826711734caadc35",
+      "npz_sha256": "f6eeaf8c9ddadac35a4193d54d2e75276303c5144f617b2c3c1182a6862ec96a",
+      "arrays": {
+        "EditPixelSize": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "MaxCurEdit": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "Fullength": {
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "float64"
+        },
+        "all_sorted_filament": {
+          "shape": [
+            130,
+            2,
+            3
+          ],
+          "dtype": "float64"
+        },
+        "AnalysisInfo": {
+          "shape": [
+            3,
+            5
+          ],
+          "dtype": "float64"
+        }
+      }
+    }
+  ],
+  "semantics": {
+    "matlab_shape_preserved": true,
+    "matlab_dtype_preserved": true,
+    "local_search_note": "The repository file local_search.m declares local_search_display; MATLAB R2023b nevertheless resolves the file by basename and the fixture calls local_search directly.",
+    "execution_note": "The fixture uses sequential loops instead of the production parfor branches; numerical helper calls are unchanged."
+  }
+}

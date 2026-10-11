@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysifne"
+version = "0.2.0"
+description = "MATLAB-free SIFNE filament reconstruction with custom Numba CUDA kernels"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-2-Clause"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "PySIFNE contributors"}]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "scikit-image>=0.21", "tifffile>=2023.7.10"]
+
+[project.optional-dependencies]
+accel = ["numba>=0.59", "torch>=2.2"]
+test = ["pytest>=8"]
+dev = ["pytest>=8", "build>=1"]
+
+[project.urls]
+Repository = "https://github.com/angela-nuaa/pysifne"
+Issues = "https://github.com/angela-nuaa/pysifne/issues"
+
+# 根目录同时作为 Python package，保持主仓库 pysifne/ submodule 的导入路径。
+[tool.setuptools]
+packages = ["pysifne"]
+package-dir = {pysifne = "."}
+include-package-data = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"

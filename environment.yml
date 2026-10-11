@@ -1,0 +1,16 @@
+name: pysifne
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - scipy
+  - scikit-image
+  - tifffile
+  - numba
+  - pytest
+  - pip:
+      - torch>=2.2
+      - build>=1
+      - -e .

@@ -1,0 +1,46 @@
+{
+  "environment": "fluoresfm",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "device": "<CUDA device 0 'b'NVIDIA GeForce RTX 3060 Laptop GPU''>",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "scikit-image": "0.26.0",
+    "tifffile": "2026.7.14",
+    "numba": "0.66.0",
+    "torch": "2.6.0+cu124"
+  },
+  "fixtures": [
+    {
+      "fixture": "sifne-fixture-20260915-r4",
+      "status": "EXACT",
+      "seconds": 6.229806899998948
+    },
+    {
+      "fixture": "curved_largecur",
+      "status": "EXACT",
+      "seconds": 0.4404443000021274
+    },
+    {
+      "fixture": "junction_image",
+      "status": "EXACT",
+      "seconds": 0.13236649999817018
+    },
+    {
+      "fixture": "multi_fragment_serial",
+      "status": "EXACT",
+      "seconds": 0.10312120000162395
+    },
+    {
+      "fixture": "single_filament",
+      "status": "EXACT",
+      "seconds": 0.11871360000077402
+    },
+    {
+      "fixture": "two_fragment_gap",
+      "status": "EXACT",
+      "seconds": 0.11067039999761619
+    }
+  ],
+  "note": "含 JIT 和校验开销，不作为性能 benchmark。"
+}
